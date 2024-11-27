@@ -20,7 +20,6 @@ let db;
   });
 })();
 
-// console.log(db);
 
 async function fetchAllRestaurants() {
   let query = 'SELECT * FROM restaurants';
@@ -151,6 +150,7 @@ app.get('/dishes/sort-by-price', async (req, res) => {
 });
 
 app.get('/', (req, res) => {
+  // console.log(db);
   res.sendFile(resolve(__dirname, 'pages/index.html'));
 });
 
